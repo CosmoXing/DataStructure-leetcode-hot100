@@ -20,6 +20,7 @@ public:
         ListNode *pa=headA,*pb=headB;
         while (pa!=pb)
         {
+            //еп╤о
             if(pa==nullptr){
                  pa=headB;
             }
