@@ -15,7 +15,8 @@ public:
         //边界处理
         if(headA==nullptr||headB==nullptr){
             return nullptr;
-        }
+        }\
+        //指针初始化
         ListNode *pa=headA,*pb=headB;
         while (pa!=pb)
         {
