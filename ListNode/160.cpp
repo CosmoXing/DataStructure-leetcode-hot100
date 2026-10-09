@@ -15,7 +15,7 @@ public:
         //边界处理
         if(headA==nullptr||headB==nullptr){
             return nullptr;
-        }\
+        }
         //指针初始化
         ListNode *pa=headA,*pb=headB;
         while (pa!=pb)
@@ -38,33 +38,6 @@ public:
     }
 };
 
-//哈希集合
-/*
-思路分析：1先遍历链表A，把所有节点地址存入unordered_set
-2遍历链表B，第一个能在集合中找到的节点 就是相交起点
-*/
-class Solution{
-public:
-    ListNode *getintersectionNode(ListNode *headA,ListNode *headB){
-        //需要定义
-        unordered_set<ListNode *> visited;
-        ListNode *temp=headA;
-        while (temp!=nullptr)
-        {
-            visited.insert(temp);
-            temp = temp->next;
-        }
-        temp = headB;
-        while (temp!=nullptr)
-        {
-            if(visited.cout(temp)){
-                return temp;
-            }
-            temp=temp->next;
-        }
-        return nullptr;
-    }
-};
 //测试代码
 int main() {
     // 构造相交链表：
